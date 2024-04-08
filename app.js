@@ -1,10 +1,8 @@
-//For secrect token
-require('dotenv').config();
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require('cors');
+const config = require("./config/config");
 //database
-const database = require("./database/db");
+const database = require("./database/mongoose");
 //user routes
 const router = require("./routes/user_route");
 //blogroute
@@ -29,9 +27,8 @@ database()
     .then(() => {
         console.log('Database connected successfully.');
         // Start the server
-        const port = process.env.PORT || 3000;
-        app.listen(port, () => {
-            console.log(`Server started @ http://localhost:${port}/api/v1/`);
+        app.listen(config.PORT, () => {
+            console.log(`Server started @ http://localhost:${config.PORT}/api/v1/`);
         });
     })
     .catch((err) => {
