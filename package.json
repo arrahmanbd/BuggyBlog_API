@@ -1,0 +1,25 @@
+{
+  "name": "buggyblog",
+  "version": "1.0.0",
+  "description": "APIs, or Application Programming Interfaces, allow different software systems to communicate with each other. I have created a simple Blogging API that allows users to authenticate, create blog posts, get all blog posts, and get a particular blog post. I have also implemented routes that allows users to signup for a blogging account, and log into their accounts. Password encryption and Json Web Token Mechanism added for extra security.\r More feature coming soon.🤙",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js",
+    "dev": "nodemon ./app.js"
+  },
+  "author": "AR Rahman",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.0",
+    "nodemon": "^3.1.0",
+    "validator": "^13.11.0"
+  }
+}
